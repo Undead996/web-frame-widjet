@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+
+    demo-widget:
+       build: app/
+       ports: 
+           - "3300:80"
+       volumes:
+          - ./app:/var/www/html
+          - ./config:/var/www/config
+          - ./include:/var/www/include
+          - ./cert:/var/www/cert
+       container_name: demo-widget
+       networks:
+           app_net_widget:
+        
+networks:
+    app_net_widget:
+        ipam:
+            driver: default
+            config:
+                - subnet: "172.16.220.0/24"
+
+        
+            

@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  overflow: hidden;
+}
+
+.w-background {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.w-wrapper {
+  height: 25rem;
+  width: 40rem;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.w-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 36rem;
+  height: 25rem;
+  color: white;
+  justify-content: space-between;
+}
+.w-container input {
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+}
+.w-container .w-header, .w-container .w-body, .w-container .w-footer {
+  width: 36rem;
+  font-size: 1.5rem;
+}
+.w-container .w-header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex: 0.2;
+}
+.w-container .w-header #close {
+  cursor: pointer;
+}
+.w-container .w-body {
+  flex: 0.6;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.w-container .w-body-topstring, .w-container .w-body-middlestring {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex: 0.4;
+}
+.w-container .w-body #cardNumber, .w-container .w-body #cardHolder {
+  width: 24rem;
+  height: 3rem;
+  background-size: 3rem;
+  background-repeat: no-repeat;
+  background-position: top 50% right 20px;
+}
+.w-container .w-body .date, .w-container .w-body #cvc {
+  width: 10rem;
+  height: 3rem;
+}
+.w-container .w-body .date {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.w-container .w-body .date #mounth {
+  border-right: solid gray 1px;
+}
+.w-container .w-body .date input {
+  width: 5rem;
+}
+.w-container .w-body-button {
+  margin: 0 auto;
+  flex: 0.4;
+}
+.w-container .w-body-button #mainbtn {
+  width: 36rem;
+  height: 4rem;
+  color: white;
+  background-color: gray;
+  font-size: 1.5rem;
+  border: none;
+}
+.w-container .w-body-button #mainbtn:active, .w-container .w-body-button #mainbtn:focus {
+  outline: none;
+}
+.w-container .w-body-button #mainbtn::-moz-focus-inner {
+  border: 0;
+}
+.w-container .w-footer {
+  flex: 0.2;
+}
+
+.error {
+  border: 2px solid #d56262 !important;
+}
+
+.readyButton {
+  background-color: #0059ff !important;
+  cursor: pointer;
+}
+
+@media (max-width: 662px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 550px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (max-width: 380px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .w-body-topstring {
+    flex-direction: column !important;
+  }
+  .w-body-topstring .date {
+    margin: 1rem 0;
+  }
+  .w-body-topstring input {
+    width: 100% !important;
+  }
+
+  .w-body-middlestring {
+    flex-direction: column !important;
+  }
+  .w-body-middlestring #cvc {
+    margin: 1rem 0;
+  }
+  .w-body-middlestring #cardHolder {
+    width: 100% !important;
+  }
+}

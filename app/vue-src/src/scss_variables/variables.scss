@@ -1,0 +1,36 @@
+$background: transparent;
+$hide-width: 752px;
+$def-transition: 0.5s;
+
+$main-font: Montserrat, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+.visa {
+  background-image: url('~@/assets/img/ps_cards/visa.svg');
+}
+.maestro {
+  background-image: url('~@/assets/img/ps_cards/maestro.svg');
+}
+.mastercard {
+  background-image: url('~@/assets/img/ps_cards/mastercard.svg');
+}
+.mir {
+  background-image: url('~@/assets/img/ps_cards/mir.svg');
+}
+.americanexpress {
+  background-image: url('~@/assets/img/ps_cards/americanexpress.svg');
+}
+.jcb {
+  background-image: url('~@/assets/img/ps_cards/jcb.svg');
+}
+.dinnersclub {
+  background-image: url('~@/assets/img/ps_cards/dinnersclub.svg');
+}
+
+.show-anim-enter-active,
+.show-anim-leave-active {
+  transition: opacity 0.7s ease;
+}
+.show-anim-enter-from,
+.show-anim-leave-to {
+  opacity: 0;
+}
